@@ -1,0 +1,45 @@
+$sizes:(
+    sm:  576px,
+    md:  768px,
+    lg:  992px,
+    xl:  1200px,
+    xxl: 1600px
+);
+
+@function reo-size($size){
+    @return map-get($sizes, $size);
+}
+
+@mixin media-max($width){
+    @media only screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin media-min($width){
+    @media only screen and (min-width: $width) {
+        @content;
+    }
+}
+
+@each $name, $size in $sizes {
+    
+    @media only screen and (max-width:#{$size}){
+        .reo-max-d-none-#{$name}{
+            display: none!important;
+        }
+        .reo-max-d-block-#{$name}{
+            display: block!important;
+        }
+    }
+    
+    @media only screen and (min-width:#{$size}){
+        .reo-min-d-none-#{$name}{
+            display: none!important;
+        }
+        .reo-min-d-block-#{$name}{
+            display: block!important;
+        }
+    }
+
+}

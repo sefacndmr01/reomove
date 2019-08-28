@@ -1,0 +1,159 @@
+section#blog__section{
+    position: relative;
+    width:100%;
+
+    &.blog-section-01{
+        margin:6rem 0;
+
+        .row{
+            position: relative;
+        }
+
+        .carousel-control{
+            position: absolute;
+            top:10%;
+            left:1rem;
+            z-index: 3;
+            display: flex;
+            flex-flow: column wrap;
+
+            button{
+                width:50px;
+                height: 50px;
+                font-size:38px;
+                text-align: center;
+                cursor: pointer;
+            }
+            
+            button.next{
+                margin-bottom: 1rem;
+                background-color: reo-color(primary);
+            }
+        }
+
+        .section_header{
+            width:100%;
+            .h1{
+                position: relative;
+                display: inline-block;
+                padding-top: 1rem;
+                
+                &::before{
+                    position: absolute;
+                    top:-.5rem;
+                    left:0;
+                    content:"";
+                    width:50px;
+                    height: 8px;
+                    background-color: reo-color(primary);
+                }
+            }
+        }
+
+        .blog-carousel{
+            position: relative;
+            width:100%;
+            transform:translateX(25%);
+            
+            &::before{
+                content: "BLOG";
+                display: inline-block;
+                position: absolute;
+                left: -75px;
+                top: 65px;
+                width: auto;
+                height: auto;
+                transform: rotate(-90deg);
+                font-size: 62px;
+                font-weight: 700;
+                color:reo-color(grayish);
+            }   
+            
+            .post-card{
+                margin:1.5rem 2rem;
+                background-color: #FFF;
+                box-shadow: 0 0 30px rgba(reo-color(secondary), .08);
+                border-radius: 10px;
+                outline: none;
+                transition: all .4s ease-in;
+                
+                &:hover{
+                    transform:translateY(-.2rem);
+
+                    figure{
+                        &::before{
+                            opacity:1;
+                            z-index: 2;
+                        }
+                    }
+                }
+
+                &.slick-current{
+                    display: block;
+                }
+
+                figure{
+                    position: relative;
+                    width:100%;
+                    margin-bottom: 1rem;
+                    overflow: hidden;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    
+                    &::before{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        z-index: -1;
+                        content:"Read more";
+                        width:100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgba(reo-color(secondary), .5);
+                        color:reo-color(primary);
+                        opacity: 0;
+                        transition: all .4s ease-in;
+                    }
+
+                    img{
+                        width:100%;
+                        min-height: 200px;
+                        object-fit: cover;
+                        transition: all .4s ease-in;
+                    }
+                }
+
+                .post-info{
+                    width:100%;
+                    padding:0 1rem;
+
+                    a.author{
+                        font-size:10px;
+                        color:reo-color(primary);
+                        outline: none;
+                    }
+
+                    span{
+                        color:reo-color(grayish);
+                        margin-left: .5rem;
+                        font-size:10px;
+                    }
+
+                }
+
+                a.post-title{
+                    display: block;
+                    padding:0 1rem 1rem;
+                    font-size:14px;
+                    font-weight:500;
+                    color: reo-color(secondary);
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

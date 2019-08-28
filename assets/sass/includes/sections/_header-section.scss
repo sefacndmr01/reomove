@@ -1,0 +1,107 @@
+header#site__header{
+    width:100%;
+    transition: background-color .4s ease-in;
+
+    &.site-header-01{
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 990;
+        width:100%;
+
+        &.scrolled{
+            background-color: reo-color(secondary);
+
+            .container-fluid{
+                padding:1rem 4rem;
+            }
+        }
+
+        .container-fluid{
+            padding:2rem 4rem;
+            transition: padding .4s ease-in;
+
+            .col{
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            .mobile{
+                a{
+                    color:#FFF;
+                transition: color .4s ease-in;
+
+                    &:hover{
+                        color:reo-color(primary);
+                    }
+                }
+
+                &:last-child{
+                    a{
+                        margin-left: auto;
+                        float: right;
+                    }
+                }
+            }
+        }
+
+        .logo{
+            display: block;
+            text-align: center;
+            
+            img{
+                margin:0 auto;
+            }
+        }
+
+        .site-nav{
+            display: inline-block;
+
+            ul{
+                display: flex;
+
+                &:hover{
+                    li{
+                        a{
+                            color:reo-color(gray);
+                        }
+                    }
+                }
+
+                li{
+                    display: flex;
+                    align-items: center;
+                    float:left;
+
+                    a{
+                        display: block;
+                        padding:.6rem 1.2rem;
+                        color:#FFF;
+                        transition: color .4s ease-in;
+
+                        &.button{
+                            color:reo-color(secondary);
+                            margin-left: 1.2rem;
+                            
+                            &:hover{
+                                color:reo-color(secondary);
+                            }
+                        }
+
+                        &:hover{
+                            color:#FFF!important;
+
+                            .reo--5{
+                                fill:#FFF!important;
+                            }
+                        }
+                        
+                        .reo--5{
+                            fill:#FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

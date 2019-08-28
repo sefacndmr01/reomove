@@ -1,0 +1,52 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active{
+    text-decoration: none!important;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+input,
+input:hover,
+input:focus,
+input:active,
+button,
+button:hover,
+button:focus,
+button:active,
+textarea,
+textarea:hover,
+textarea:focus,
+textarea:active,
+select,
+select:hover,
+select:focus,
+select:active{
+    outline:none!important;
+}
+
+li{
+    list-style: none;
+}
+
+button:disabled,
+button[disabled]{
+    background-color: #cccccc!important;
+    color: #8c8c8c!important;
+}

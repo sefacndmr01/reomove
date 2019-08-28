@@ -1,0 +1,55 @@
+<!-- SVGs -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <defs>
+        <symbol id="reo-1" viewBox="0 0 180 265">
+            <rect class="reo-1-rect" width="180" height="265" rx="62" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="reo-2" viewBox="0 0 110 110">
+            <circle class="reo-2-circle" cx="46" cy="46" r="46" transform="translate(9 9)" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="reo-3" viewBox="0 0 132.727 126.938">
+            <path class="reo-3-path" d="M42.845,14.958a10,10,0,0,1,17.311,0l34.16,59.034A10,10,0,0,1,85.66,89H17.34A10,10,0,0,1,8.685,73.992Z" transform="matrix(0.883, 0.469, -0.469, 0.883, 41.783, 0)" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="reo-4" viewBox="0 0 55.146 55.146">
+            <rect class="reo-4-rect" width="39" height="39" rx="8" transform="matrix(0.695, -0.719, 0.719, 0.695, 0, 28.054)" fill="currentColor"/>
+        </symbol>
+
+        <symbol id="reo-5" viewBox="0 0 16 16">
+            <g class="reo-5-g" transform="translate(-1190 -37)">
+                <circle cx="2" cy="2" r="2" transform="translate(1190 37)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1196 37)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1202 37)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1190 43)" fill="currentColor"/>
+                <path d="M2,0A2,2,0,1,1,0,2,2,2,0,0,1,2,0Z" transform="translate(1196 43)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1202 43)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1190 49)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1196 49)" fill="currentColor"/>
+                <circle cx="2" cy="2" r="2" transform="translate(1202 49)" fill="currentColor"/>
+            </g>
+        </symbol>
+
+        <symbol id="reo-6" viewBox="0 0 20 10">
+            <g transform="translate(-1071 112.5)">
+                <rect width="15" height="3" rx="1.5" transform="translate(1071 -106.5)" fill="currentColor"/>
+                <rect width="25" height="3" rx="1.5" transform="translate(1071 -112.5)" fill="currentColor"/>
+            </g>
+        </symbol>
+
+        <symbol id="reo-mask-top" viewBox="0 0 1367.831 87.567">
+            <path d="M-1631.146,1236.6v87.567s354.139-77.831,552.691-60.514,296.944,62.3,423.448,54.8,391.693-80.588,391.693-80.588Z" transform="translate(1631.146 -1236.598)" fill="#fff"/>
+        </symbol>
+
+        <symbol id="reo-mask-bottom" viewBox="0 0 1366.024 74.431">
+            <path d="M-1630.491,1603.317s374.666,67.422,647.052,67.422,718.972-74.431,718.972-74.431v74.431H-1630.491Z" transform="translate(1630.491 -1596.307)" fill="#fff"/>
+        </symbol>
+        
+    </defs>
+</svg>
+<!-- SVGs -->
+
+<svg viewBox="0 0 1367.831 87.567">
+    <use xlink:href="assets/images/e-teachme.svg#teachme-whiteboard">
+</svg>

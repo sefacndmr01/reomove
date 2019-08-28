@@ -1,0 +1,84 @@
+section#counter__section{
+    position: relative;
+    z-index: 1;
+    width:100%;
+
+    &.counter-section-01{
+        width:100%;
+
+        .counter-card{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover{
+                span.icon{
+                    &::before{
+                        transform: scale(1);
+
+                        @include media-max(reo-size(lg)){
+                            transform: translateX(-50%) scale(1);
+                        }
+                    }
+                }
+            }
+
+            span.icon{
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 2rem;
+                text-align: center;
+
+                &::before{
+                    content:"";
+                    position: absolute;
+                    top:-10px;
+                    left:-10px;
+                    z-index: -1;
+                    width:60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    background: linear-gradient(to bottom,reo-color(primary), transparent);
+                    transform: scale(.6);
+                    transform-origin: center;
+                    transition: all .4s ease-in;
+
+                    @include media-max(reo-size(lg)){
+                        left:50%;
+                        transform: translateX(-50%) scale(.6);
+                    }
+                }
+                
+                i{
+                    font-size:40px;
+                }
+
+                @include media-max(reo-size(lg)){
+                    margin:0 0 .5rem 0;
+                }
+            }
+
+            p{
+                font-size:16px;
+                font-weight: 400;
+                text-align: center;
+                span{
+                    display: block;
+                    width:100%;
+                    font-size:32px;
+                    font-weight: 600;
+                }
+            }
+
+            @include media-max(reo-size(lg)){
+                flex-flow: column wrap;
+                margin:1rem 0;
+                *{
+                    width:100%;
+                }
+            }
+        }
+    }
+}

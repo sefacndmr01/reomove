@@ -1,0 +1,68 @@
+section#contact__section{
+    position: relative;
+    width:100%;
+
+    &.contact-section-01{
+        margin:2rem 0 0;
+        padding:10rem 0 2rem;
+        overflow: hidden;
+
+        *{
+            position: relative;
+            z-index: 1;
+        }
+
+        .section_header{
+            display:flex;
+            justify-content: center;
+           
+            h1{
+                display:inline-block;
+                color:#FFF;
+                font-size:42px;
+                font-weight: 700;
+
+                span{
+                    display:block;
+                    margin-bottom:-.5rem;
+                    font-weight:300;
+                    font-size:32px;
+                    text-transform: unset;
+                }
+            }
+        }
+
+        form.row{
+            padding-top:4rem;
+            padding-bottom: 4rem;
+
+            .col-12{
+                @include media-max(reo-size(large)){
+                    margin:1rem 0!important;
+                }
+            }
+
+            button[type=submit]{
+                margin:2rem 0 0;
+                float:right;
+                font-size:16px;
+                padding:.8rem 2rem;
+            }
+
+        }
+
+        &::after{
+            position: absolute;
+            bottom:0;
+            left:-50%;
+            z-index: 0;
+            content:"";
+            width:300%;
+            height: 100%;
+            background-color: reo-color(secondary);
+            transform: rotate(-3deg);
+        }
+
+        
+    }
+}

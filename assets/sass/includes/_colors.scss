@@ -1,0 +1,24 @@
+$colors:(
+    primary:#FBDC00,
+    secondary:#131E27,
+    dark:#000,
+    grayish:#E3E3E3,
+    gray:#B1B1B1
+) !default;
+
+@function reo-color($color){
+    @return map-get($colors, $color);
+}
+
+$gradient-bg: linear-gradient(to right,reo-color(primary) ,#FFEC64);
+
+/* COLORS */
+@each $name, $color in $colors {
+    .reo-bg-#{$name}{
+        background-color: $color;
+    }
+    .reo-color-#{$name}{
+        color: $color;
+    }
+}
+

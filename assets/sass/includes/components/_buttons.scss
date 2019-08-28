@@ -1,0 +1,32 @@
+button,
+.button{
+    border:none;
+    box-shadow: none;
+    cursor: pointer;
+    
+    &.type-01{
+        padding:.6rem 1.2rem;
+        color:reo-color(secondary);
+        background: $gradient-bg;
+        border-radius: 5px;
+        transition: box-shadow .4s ease-in!important;
+        
+        &:hover{
+            box-shadow: 0 0 30px rgba(reo-color(primary), .35);
+        }
+    }
+
+    &.type-02{
+        padding:.8rem 1.2rem;
+        color:#FFF;
+        background: reo-color(secondary);
+        border-radius: 40px;
+        transition: border-radius .4s ease-in!important;
+        text-align: center;
+        
+        &:hover{
+            border-radius: 40px;
+            transition: border-radius .4s ease-in!important;
+        }
+    }
+}

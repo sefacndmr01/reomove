@@ -1,0 +1,174 @@
+section.hamburger{
+    position:fixed;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -999;
+
+    &.hamburger-active{
+        opacity: 1;
+        visibility: visible;
+        z-index: 999;
+    }
+
+    &.type-01{
+        width:20%;
+        height:100vh;
+        top:0;
+        right:0;
+        background-color: reo-color(primary);
+        padding:2rem;
+        transform:translateX(100%);
+        transition: visibility 0s, z-index 0s, opacity .4s, transform .4s ease-in;
+        overflow-y:auto;
+
+        @include media-max(reo-size(lg)){
+            width:80%;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: reo-color(primary); 
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: reo-color(secondary);
+        }
+          
+        &::-webkit-scrollbar-thumb:hover {
+            background: darken(reo-color(secondary),10%); 
+        }
+
+        &.hamburger-active{
+            transform:translateX(0);
+        }
+
+        .close-hamburger{
+            position: absolute;
+            top:4.5%;
+            right:10%;
+            font-size:32px;
+            color:reo-color(secondary);
+            font-weight: 600;
+        }
+
+        .content{
+            width:100%;
+            padding:4rem 0;
+
+            h1{
+                margin-bottom:2rem;
+                border-left: 3px solid reo-color(secondary);
+                padding-left: .5rem;
+                font-size:32px;
+
+                span{
+                    font-size:22px;
+                    display: block;
+                }
+            }
+
+            p{
+                width:100%;
+                font-size:16px;
+                margin-bottom:2rem;
+            }
+
+            .address{
+                width:100%;
+                background-color:#FFF;
+                border-radius: 10px;
+                padding:1rem;
+                margin-bottom: 2rem;
+
+                p{
+                    color:reo-color(secondary);
+                    font-size:16px;
+                    margin:0;
+
+                    span{
+                        display:block;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .phone{
+                width:100%;
+                background-color:reo-color(secondary);
+                border-radius: 10px;
+                padding:1rem;
+
+                a{
+                    display: block;
+                    color:#FFF;
+                    transition:color .4s ease-in;
+
+                    &:hover{
+                        color:reo-color(primary);
+                    }
+                }
+            }
+        }
+    }
+
+    &.type-02{
+        width:10%;
+        height:100vh;
+        top:0;
+        left:0;
+        background-color: reo-color(primary);
+        padding:2rem;
+        transform:translateX(-100%);
+        transition: visibility 0s, z-index 0s, opacity .4s, transform .4s ease-in;
+        overflow-y:auto;
+
+        @include media-max(reo-size(lg)){
+            width:60%;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: reo-color(primary); 
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: reo-color(secondary);
+        }
+          
+        &::-webkit-scrollbar-thumb:hover {
+            background: darken(reo-color(secondary),10%); 
+        }
+
+        &.hamburger-active{
+            transform:translateX(0);
+        }
+
+        .close-hamburger{
+            position: absolute;
+            top:4.5%;
+            right:10%;
+            font-size:32px;
+            color:reo-color(secondary);
+            font-weight: 600;
+        }
+
+        ol{
+            display:flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            height: calc(100% - 20px);
+            
+            li{
+                a{
+                    display: block;
+                    padding:.5rem 0;
+                    font-size:16px;
+                    transition: transform .4s ease-in;
+                    color:reo-color(secondary);
+
+                    &:hover{
+                        transform:translateX(10px);
+                    }
+                }
+            }
+        }
+    }
+}

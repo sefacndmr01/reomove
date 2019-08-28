@@ -1,0 +1,26 @@
+{
+  "name": "reomove",
+  "version": "1.0.0",
+  "description": "Free Html5/Css3 Landing Page Template",
+  "main": "index.js",
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sefacndmr01/reomove.git"
+  },
+  "keywords": [
+    "landing",
+    "page",
+    "html5",
+    "css3",
+    "template"
+  ],
+  "author": "Sefa Can Demir",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sefacndmr01/reomove/issues"
+  },
+  "homepage": "https://github.com/sefacndmr01/reomove#readme"
+}

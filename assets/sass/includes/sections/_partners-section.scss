@@ -1,0 +1,48 @@
+section#partners__section{
+    position: relative;
+    width:100%;
+
+    &.partners-section-01{
+        padding:4rem 0;
+
+        .section_header{
+            width:100%;
+            margin-bottom: 5rem;
+
+            .h1{
+                position: relative;
+                display: inline-block;
+                padding-top: 1rem;
+                
+                &::before{
+                    position: absolute;
+                    top:-.5rem;
+                    left:0;
+                    content:"";
+                    width:50px;
+                    height: 8px;
+                    background-color: reo-color(primary);
+                }
+            }
+        }
+
+        .brand{
+            a{
+                display: block;
+                opacity: .5;
+                transition: opacity .4s ease-in;
+                margin:1rem;
+                text-align: center;
+
+                img{
+                    width:100%;
+                    object-fit: cover;
+                }
+                
+                &:hover{
+                    opacity:1;
+                }
+            }
+        }
+    }
+}

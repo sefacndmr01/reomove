@@ -1,0 +1,85 @@
+/* FONTS */
+$font-path: "../fonts/"!default;
+
+$font-faces: (
+ 'OpenSans': (
+    "OpenSans-Light" 300 normal,
+    "OpenSans-LightItalic" 300 italic,
+    "OpenSans-Regular" 400 normal,
+    "OpenSans-RegularItalic" 400 italic,
+    "OpenSans-SemiBold" 500 normal,
+    "OpenSans-SemiBoldItalic" 500 italic,
+    "OpenSans-Bold" 700 normal,
+    "OpenSans-BoldItalic" 700 italic,
+    "OpenSans-ExtraBold" 900 normal,
+    "OpenSans-ExtraBoldItalic" 900 italic
+  )
+) !default;
+
+@mixin font-face($font-family,$font-path, $font-folder, $font-file, $font-weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url( $font-path + $font-folder + $font-file + '.ttf') format('truetype');
+    font-weight: $font-weight;
+    font-style: $font-style;
+  }
+}
+
+@each $font in $font-faces {
+  $font-family: quote( #{nth($font, 1)} );
+  $font-folder: quote( #{nth($font, 1)} ) + '/';
+  $font-variants: nth($font, 2);
+  
+  @each $variant in $font-variants {
+    $font-path: $font-path !global;
+    $font-file: nth($variant, 1);
+    $font-weight: nth($variant, 2);
+    $font-style: nth($variant, 3);
+  
+    @include font-face($font-family, $font-path, $font-folder, $font-file, $font-weight, $font-style)
+  }
+}
+
+@mixin reo-font($font-family, $font-weight:400, $font-style:normal) {
+  $serif: sans-serif !default;
+  font-family: $font-family, $serif;
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/MaterialIcons/MaterialIcons-Regular.eot'); /* For IE6-8 */
+  src: local('../fonts/MaterialIcons'),
+       local('MaterialIcons-Regular'),
+       url('../fonts/MaterialIcons/MaterialIcons-Regular.woff2') format('woff2'),
+       url('../fonts/MaterialIcons/MaterialIcons-Regular.woff') format('woff'),
+       url('../fonts/MaterialIcons/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}

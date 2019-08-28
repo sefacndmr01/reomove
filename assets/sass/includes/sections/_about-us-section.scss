@@ -1,0 +1,67 @@
+section#about__us__section{
+    width:100%;
+
+    &.about-us-section-01{
+        width:100%;
+        padding:4rem 0;
+
+        .col-lg-6{
+
+            &:first-child{
+                @include media-max(reo-size(lg)){
+                    margin-bottom: 1rem;
+                }
+            }
+            
+            &:last-child{
+                padding:0 4rem;
+            }
+        }
+
+        .video{
+            position: relative;
+            z-index: 1;
+
+            video{
+                position: relative;
+                z-index: 1;
+                width:100%;
+                @include media-min(reo-size(lg)){min-height: 350px;}
+                background:transparent no-repeat url('');
+                background-size:cover;
+                border-radius: 10px;
+                box-shadow: 0 0 30px rgba(reo-color(secondary),.16);
+            }
+
+            .reo--1{
+                position: absolute;
+                z-index: -1;
+                right: -80px;
+                top: 0;
+                color:reo-color(primary);
+            }
+
+            .reo-play{
+                position: absolute;
+                z-index: 2;
+                bottom:20%;
+                left:30px;
+                transform: translate(0,-50%);
+                
+                &::before{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    top: -2px;
+                    left: -2px;
+                    bottom: -2px;
+                    right: -2px;
+                    border-radius: inherit;
+                    border: 1px solid reo-color(primary);
+                    -webkit-animation: reo-play-ripple 2s cubic-bezier(.23,1,.32,1) both infinite;
+                    animation: reo-play-ripple 2s cubic-bezier(.23,1,.32,1) both infinite;
+                }
+            }
+        }
+    }
+}

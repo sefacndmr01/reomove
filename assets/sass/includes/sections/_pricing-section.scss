@@ -1,0 +1,189 @@
+section#pricing__section{
+    width:100%;
+
+    &.pricing-section-01{
+        position: relative;
+        display: flex;
+        flex-flow:column wrap;
+        justify-content: center;
+
+        h1{
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin-bottom: 12rem;
+
+            &::after{
+                bottom:-1rem;
+                left:50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        .container{
+
+            &::before{
+                position: absolute;
+                bottom:30%;
+                left:-50%;
+                z-index: 1;
+                content:"";
+                width:300%;
+                height: 60%;
+                background-color: reo-color(grayish);
+                transform: rotate(-6deg);
+            }
+
+            [class^="col"]{
+                padding:0;
+            }
+
+            .pricing-card{
+                position: relative;
+                z-index: 2;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: center;
+                margin-top: 12rem;
+                padding:2rem;
+                background-color: #FFF;
+                cursor: pointer;
+                user-select: none;
+                transition: all .4s ease-in;
+
+                &.popular{
+                    position: relative;
+                    z-index: 3;
+                    padding:calc(2rem + 50px) 2rem 2rem 2rem;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    box-shadow: 0 0 90px rgba(reo-color(secondary),.16);
+                    margin-top: 8rem;
+
+                    .popular-tag{
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        color:reo-color(secondary);
+                        background-color: reo-color(primary);
+                        text-align: center;
+                        font-size:16px;
+                        font-weight: 600;
+                        margin-bottom: 2rem;
+                        padding:.5rem;
+                    }
+
+                    .button{
+                        margin-top: 2rem;
+                    }
+                }
+
+                *{
+                    width:100%;
+                }
+
+                h1{
+                    font-weight: 900;
+                    font-size:26px;
+                    text-align: center;
+                    margin-bottom:1rem!important;
+                    text-transform: uppercase;
+                }
+
+                p{
+                    text-align: center;
+                    font-size:16px;
+                }
+
+                .price{
+                    margin-bottom: 1rem;
+
+                    h3{
+                        text-align: center;
+                        font-size:64px;
+
+                        span{
+                            font-size:12px;
+                        }
+                    }
+
+                    p{
+                        text-align: center;
+                        font-size:12px;
+                        margin-top: -.8rem;
+                    }
+
+                    &.custom{
+                        margin-bottom: 0;
+                        p{
+                            font-size:20px;
+                            padding:1.65em 0;
+                            text-transform: uppercase;
+
+                            span{
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+
+                i.material-icons.package-icon{
+                    margin-bottom: 1rem;
+                    text-align: center;
+                    font-size:70px;
+                    color:reo-color(primary);
+                }
+
+                ol{
+                    margin-top: 1rem;
+                    li{
+                        display: flex;
+                        flex-flow: row nowrap;
+                        margin:.5rem 0;
+
+                        i{
+                            width:15px;
+                            margin-right: 1rem;
+                        }
+
+                        font-weight: 500;
+
+                        &.deactive{
+                            opacity: .2;
+                        }
+                    }
+                }
+
+                &:hover{
+                    z-index: 4;
+                    transform: scale(1.1);
+                    box-shadow: 0 0 30px rgba(reo-color(secondary),.16);
+                }
+
+                @include media-max(reo-size(lg)){
+                    margin-top:2rem!important;
+                }
+                
+            }
+
+            @include media-max(reo-size(sm)){
+                margin-top: 1rem!important;
+                padding:0 2rem;
+                
+                
+                [class^="col"]{
+                    padding:0 1rem!important;
+                }
+            }
+        }
+
+        @include media-max(reo-size(sm)){
+            padding:4rem 0;
+            .reo-h1{
+                margin-bottom:1rem;
+            }
+        }
+    }
+}
